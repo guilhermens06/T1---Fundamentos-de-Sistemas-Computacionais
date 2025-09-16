@@ -6,6 +6,7 @@ Victor Ribeiro Rodrigues Frade - 25103115
 
 
 # Problema 1:
+Desenvolva um programa que escreva na memória os N primeiros números inteiros ímpares maiores que zero. Seu programa deverá ser N da memória e funcionar para qualquer valor de N. Os valores deverão ser escritos a partir do endereço 0x20 e aparecerem contiguamente na memória.
 
 # Problema 2:
 
