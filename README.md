@@ -1,6 +1,8 @@
 # T1-Fundamentos-de-Sistemas-Computacionais
 Guilherme Niemxeski Santos - 25101197 <br>
-Eduardo Pereira Duarte Demeneghi - 25105472
+Eduardo Pereira Duarte Demeneghi - 25105472 <br>
+Lorenzo Azevedo Borghetti - 25101929 <br>
+Victor Ribeiro Rodrigues Frade - 25103115 
 
 
 # Problema 1:
