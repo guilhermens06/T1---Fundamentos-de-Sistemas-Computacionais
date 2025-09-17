@@ -1,5 +1,5 @@
 main
-    add v0,zr,0x50  	; endereço inicial do vetor
+	  add v0,zr,0x50  	; endereço inicial do vetor
 	  add v1,zr,0      	; max inicial     
 	  add v2,zr,0x90  	; endereço final do vetor
 	  add v3,zr,array		
