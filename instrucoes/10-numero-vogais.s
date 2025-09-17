@@ -1,10 +1,11 @@
 main
-	add a0,zr,palavra
-	add v0,zr,0x120
-	add v1,zr,0
+	add a0,zr,palavra	
+	add v0,zr,0x130		; endereço inicial de escrita da palavra
+	add v1,zr,0			; inicialização do contador
 
+; inserção da palavra na memória
 inserir
-	ldb v2,a0
+	ldb v2,a0		
 	stw v2,v0
 	beq v2,zr,restore
 	add a0,a0,1
@@ -12,19 +13,21 @@ inserir
 	add v1,v1,1
 	beq zr,zr,inserir
 
+
 restore
-	add v0,zr,0x120
-	add v2,zr,0
+	add v0,zr,0x130		; retorno do ponteiro para o início da palavra
+	add v2,zr,0			; inicialização de variáveis {
 	add v5,zr,0
 	add v6,zr,0
-	add v7,zr,0
-	stw v1,zr,0x130
-	add v1,zr,0
+	add v7,zr,0			; }
+	stw v1,zr,0x120		; guardar o número de caracteres
+	add v1,zr,0			; liberar a variável para uso posterior
 	beq zr,zr,c1
 
+; checagem se os caracteres da palavra são vogais, checando maiúsculas e minúsculas
 c1
-	ldw v3,v0
-	beq v3,zr,end
+	ldw v3,v0		
+	beq v3,zr,end		; se chegarmos a um espaço em branco, fim da palavra, ir para fim do programa
 	ldw v4,zr,a
 	beq v3,v4,cont_a
 	ldw v4,zr,A
@@ -45,9 +48,11 @@ c1
 	beq v3,v4,cont_u
 	ldw v4,zr,U
 	beq v3,v4,cont_u
-	add v0,v0,2
+	add v0,v0,2			; incremento caso o caractere não seja vogal
 	beq zr,zr,c1
-	
+
+; em todos os conts há o incremento de v0, para ir para a próxima posição de memória
+; há também o incremento de suas variáveis próprias contadoras
 cont_a
 	add v1,v1,1
 	add v0,v0,2
@@ -70,16 +75,17 @@ cont_u
 	beq zr,zr,c1
 
 end
-	stw v1,zr,0x140
-	stw v2,zr,0x142
-	stw v5,zr,0x144
-	stw v6,zr,0x146
-	stw v7,zr,0x148
+	stw v1,zr,0x124		; posições de armazenamento dos contadores {
+	stw v2,zr,0x126
+	stw v5,zr,0x128
+	stw v6,zr,0x12a
+	stw v7,zr,0x12c		; }
 	hlt
 
 palavra
 	"ornitorrinco"
 
+; em código ASCII
 a
 	97
 e
