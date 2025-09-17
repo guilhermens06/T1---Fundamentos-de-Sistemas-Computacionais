@@ -1,8 +1,7 @@
 # T1-Fundamentos-de-Sistemas-Computacionais
 PUCRS<br>
 Prof. Anderson Domingues<br>
-
-- O problema 7 foi desconsiderado.
+.
 ## Autores
 Guilherme Niemxeski Santos - 25101197<br>
 Eduardo Pereira Duarte Demeneghi - 25105472<br>
@@ -14,7 +13,7 @@ Victor Ribeiro Rodrigues Frade - 25103115<br>
 <p>Desenvolva um programa que escreva na memória os N primeiros números inteiros ímpares maiores que zero. Seu programa deverá ser N da memória e funcionar para qualquer valor de N. Os valores deverão ser escritos a partir do endereço 0x20 e aparecerem contiguamente na memória.</p><br>
 
 ### Explicação: 
-<p>Este programa calcula os N primeiros números ímpares maiores que zero e armazena-os sequencialmente na memória. Como o próprio código do programa ocupa os endereços iniciais da memória, foi escolhido o endereço 0x40 para iniciar a escrita dos resultados. Isso evita que o programa sobrescreva suas próprias instruções, o que poderia acontecer se um endereço anterior fosse utilizado. O programa lê o valor de N da memória para controlar um loop e, ao final da execução, a memória, a partir do endereço 0x40, conterá a sequência dos N primeiros números ímpares: 1, 3, 5, 7...</p><br>
+<p>Este programa calcula os N primeiros números ímpares maiores que zero e armazena-os sequencialmente na memória. Como o próprio código do programa ocupa os endereços iniciais da memória, foi escolhido o endereço 0x40 para iniciar a escrita dos resultados. Isso evita que o programa sobrescreva suas próprias instruções, o que poderia acontecer se um endereço anterior fosse utilizado. O programa lê o valor de N da memória para controlar um loop e, ao final da execução, a memória, a partir do endereço 0x40, conterá a sequência dos N primeiros números ímpares: 1, 3, 5, 7... No print abaixo, o valor de n é 25, ou seja, a partir do endereço de memória 0x40, aparecem os 25 primeiro números primos maiores que zero.</p><br>
 
 ![image_alt](prints/problema-1.png)
 
@@ -25,7 +24,7 @@ Victor Ribeiro Rodrigues Frade - 25103115<br>
 <p>Desenvolva um programa capaz de gerar os N primeiros números da sequência de Fibonacci. Escreva cada número gerado na memória, a partir do endereço 0x30.</p><br>
 
 ### Explicação: 
-<p>Este programa gera os N primeiros números da sequência de Fibonacci. O programa inicia tratando os dois primeiros termos (1 e 1) como casos base e, em seguida, entra num loop para calcular os termos subsequentes, somando os dois anteriores. Embora o enunciado original sugerisse um endereço mais baixo, o código utiliza o endereço 0x70. Essa escolha foi feita para garantir a segurança da execução, evitando sobrescrita de instruções. Ao final da execução, a memória conterá, a partir de 0x70, a sequência de Fibonacci: 1, 1, 2, 3, 5, 8, ...</p><br>
+<p>Este programa gera os N primeiros números da sequência de Fibonacci. O programa inicia tratando os dois primeiros termos (1 e 1) como casos base e, em seguida, entra num loop para calcular os termos subsequentes, somando os dois anteriores. Embora o enunciado original sugerisse um endereço mais baixo, o código utiliza o endereço 0x70. Essa escolha foi feita para garantir a segurança da execução, evitando sobrescrita de instruções. Ao final da execução, a memória conterá, a partir de 0x70, a sequência de Fibonacci: 1, 1, 2, 3, 5, 8, ... No print abaixo, o n é igual a 20, o que significa que, a partir de 0x70, aparecem os 20 primeiros termos da sequência de Fibonacci.</p><br>
 
 ![image_alt](prints/problema-2.png)
 
@@ -42,7 +41,7 @@ Victor Ribeiro Rodrigues Frade - 25103115<br>
 
 <p>Fase de Busca: O programa percorre a região que acabou de preencher, comparando cada valor com o de uma variável que armazena o máximo encontrado até o momento, inicialmente zero. Se um número maior é lido, o valor máximo é atualizado.</p><br>
 
-<p>Ao final da execução, o maior número de toda a sequência é armazenado no endereço de memória 0xa0. É importante notar que os endereços de memória utilizados pelo código (0x50 a 0x90 para os dados e 0xa0 para o resultado) diferem dos especificados no enunciado original, para não haver sobrescrita de instruções.</p><br>
+<p>Ao final da execução, o maior número de toda a sequência é armazenado no endereço de memória 0xa0. É importante notar que os endereços de memória utilizados pelo código (0x50 a 0x90 para os dados e 0xa0 para o resultado) diferem dos especificados no enunciado original, para não haver sobrescrita de instruções. No print abaixo, o maior número da região de memória pesquisada é 57 (39 em hexadecimal), valor que está armazenado em 0xa0.</p><br>
 
 ![image_alt](prints/problema-3.png)
 
@@ -64,7 +63,7 @@ Victor Ribeiro Rodrigues Frade - 25103115<br>
 <p>Escreva um programa que procura entre os endereços 0x60 e 0x70 por dois números cuja soma seja igual a 10. Caso esses números existam, a posição deles deverá ser escrita nos endereços 0x80 e 0x90.</p><br>
 
 ### Explicação: 
-<p>Há o carregamento automático do vetor na memória, mas ele é recopiado para uma posição de memória subsequente. Em seguida, é executado o algoritmo de busca, que utiliza um loop para testar a soma de cada par único de números nessa lista. Caso um par que some 10 seja encontrado, os endereços de memória desses dois números são escritos nas posições 0xb0 e 0xb2, e o programa termina. Se nenhum par correspondente for encontrado, o programa simplesmente para, não guardando nada nas posições 0xb0 e 0xb2.</p><br>
+<p>Há o carregamento automático do vetor na memória, mas ele é recopiado para uma posição de memória subsequente. Em seguida, é executado o algoritmo de busca, que utiliza um loop para testar a soma de cada par único de números nessa lista. O loop percorre a copia do vetor feita manualmente. Caso um par que some 10 seja encontrado, os endereços de memória desses dois números são escritos nas posições 0xb0 e 0xb2, e o programa termina. Se nenhum par correspondente for encontrado, o programa simplesmente para, não guardando nada nas posições 0xb0 e 0xb2.</p><br>
 
 ![image_alt](prints/problema-5.png)
 
@@ -116,3 +115,4 @@ Victor Ribeiro Rodrigues Frade - 25103115<br>
 
 ## Observações
 - Na maioria dos problemas, a reorganização do endereço de memória pedido teve o intuito, sobretudo, de evitar a sobrescrita do hlt, o que geraria um loop infinito em alguns casos.<br>
+- O problema 7 foi desconsiderado.
