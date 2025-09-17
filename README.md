@@ -1,4 +1,7 @@
 # T1-Fundamentos-de-Sistemas-Computacionais
+PUCRS <br>
+Prof. Anderson Domingues <br>
+
 Guilherme Niemxeski Santos - 25101197 <br>
 Eduardo Pereira Duarte Demeneghi - 25105472 <br>
 Lorenzo Azevedo Borghetti - 25101929 <br>
