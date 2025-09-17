@@ -20,6 +20,7 @@ Este programa calcula os N primeiros números ímpares maiores que zero e armaze
 ---
 
 print:
+![image_alt](prints/problema-1.png)
 
 ---
 
@@ -34,6 +35,7 @@ Explicação: Este programa gera os N primeiros números da sequência de Fibona
 ---
 
 print:
+![image_alt](prints/problema-2.png)
 
 ---
 
@@ -54,6 +56,7 @@ Ao final da execução, o maior número de toda a sequência é armazenado no en
 ---
 
 print: 
+![image_alt](prints/problema-3.png)
 
 ---
 
@@ -68,6 +71,7 @@ Explicação: O algoritmo percorre um bloco de memória de origem, verificando c
 ---
 
 print:
+![image_alt](prints/problema-4.png)
 
 ---
 
@@ -82,6 +86,7 @@ Explicação: A sua execução é dividida em duas fases: primeiro, ele iniciali
 ---
 
 print:
+![image_alt](prints/problema-5.png)
 
 ---
 
@@ -98,6 +103,7 @@ Enquanto tal caso não ocorre os valores, a cada iteração, são escritos de fo
 ---
 
 print:
+![image_alt](prints/problema-6.png)
 
 ---
 
@@ -114,6 +120,7 @@ Caso ainda haja caracteres a serem carregados, o a0 irá primeiro escrever o car
 ---
 
 print:
+![image_alt](prints/problema-8.png)
 
 ---
 
@@ -128,6 +135,7 @@ Explicação:
 ---
 
 print:
+![image_alt](prints/problema-9.png)
 
 ---
 
@@ -144,5 +152,6 @@ Caso, após as comparações, o caractere não for a vogal do método programa c
 ---
 
 print:
+![image_alt](prints/problema-10.png)
 
 ---
