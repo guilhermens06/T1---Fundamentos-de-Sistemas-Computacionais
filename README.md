@@ -31,7 +31,7 @@ Victor Ribeiro Rodrigues Frade - 25103115<br>
 <p>Enunciado: Escreva um programa para encontrar o maior número inteiro positivo escrito em memória entre os endereços 0x40 e 0x80. O número encontrado deverá ser escrito na posição 0x90.</p><br>
 Explicação: A sua execução ocorre em duas fases principais:<br>
 
-<p>Fase de Preparação: Primeiro, o programa copia uma lista de números inteiros para os endereços 0x50 a 0x90. Criaamos o nosso próprio conjunto de dados de teste na memória antes de iniciar a busca.</p><br>
+<p>Fase de Preparação: Primeiro, o programa copia uma lista de números inteiros para os endereços 0x50 a 0x90. Criamos o nosso próprio conjunto de dados de teste na memória antes de iniciar a busca.</p><br>
 
 <p>Fase de Busca: O programa percorre a região que acabou de preencher, comparando cada valor com o de uma variável que armazena o máximo encontrado até o momento, inicialmente zero. Se um número maior é lido, o valor máximo é atualizado.</p><br>
 
