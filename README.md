@@ -134,7 +134,9 @@ print:
 
 Enunciado: Escreva um programa que conta o número de cada vogal em uma palavra. O número de letras A, E, I, O e U devem ser escritos, respectivamente, nos endereços 0x40, 0x44, 0x48, 0x50 e 0x52. A palavra deve ser lida a partir do endereço 0x60. A quantidade de letras na palavra deve ser lida do endereço 0x58.
 
-Explicação:
+Explicação: 
+O programa lê da memória o comprimento e o endereço inicial de uma palavra e percorre cada caractere, comparando-o (em maiúscula e minúscula) com as vogais A, E, I, O e U. Para cada ocorrência encontrada de cada das vogais, o contador correspondente em posições específicas da memória é incrementado. Antes de iniciar as  comparções, todos os contadores são zerados. 
+Caso, após as comparações, o caractere não for a vogal do método programa continua, partindo para a comparação com a próxima vogal, caso encontre-a o programa pula diretamente para o "loop continue". Dentro desse método o caractere é avançado, o contador de caracteres restante é diminuído e, caso esse  seja diferente de 0 o programa volta para o início do loop. Além disso, assim como no exercício 8, quando o  comprimento (a0) se igualar a 0, não houver mais caracteres a ser comaparados o programa é encerrado pelo "end".
 
 ---
 
