@@ -62,7 +62,7 @@ Explicação: A sua execução ocorre em duas fases principais:<br>
 # Problema 6:
 <p>Enunciado: Escreva um programa que inverte a ordem dos valores compreendidos entre os endereços 0x40 e 0x60, isto é, os valores deverão aparecer "de trás pra frente" na memória. Você não deverá ler ou escrever em endereços de memória fora do intervalo entre 0x40 e 0x60.</p><br>
 
-<p>Explicação: O vetor, definido nas instruções, é inserido nas posições de memória 0x24 a 0x44. Há um ponteiro, já definido pelo preenchimento do vetor, ao seu final. Utiliza-se, então, esse ponteiro como base para o preenchimento do vetor invertido por meio de um loop, havendo o decremento desse ponteiro a cada execução. O vetor invertido começa a ser erscrito na posição de memória 0x50.</p><br>
+<p>Explicação: O vetor, definido nas instruções, é inserido nas posições de memória 0x24 a 0x44. Há um ponteiro, já definido pelo preenchimento do vetor, ao seu final. Utiliza-se, então, esse ponteiro como base para o preenchimento do vetor invertido por meio de um loop, havendo o decremento desse ponteiro a cada execução. O vetor invertido começa a ser escrito na posição de memória 0x50.</p><br>
 
 ![image_alt](prints/problema-6.png)
 
