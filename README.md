@@ -88,7 +88,9 @@ print:
 
 Enunciado: Escreva um programa que inverte a ordem dos valores compreendidos entre os endereços 0x40 e 0x60, isto é, os valores deverão aparecer "de trás pra frente" na memória. Você não deverá ler ou escrever em endereços de memória fora do intervalo entre 0x40 e 0x60.
 
-Explicação:
+Explicação: A execução é feita utilizando duas fases: primeiramente, inicializa em uma área de memória, entre 0x24 e 0x44, valores pré definidos pelo vetor "array", presente no final do código. Após isso é executado o laço ("loop") parte do código que, caso, e quando, v1 for igual a v0 leva ao fim do cógido ("end") que possui o comando hlt, encerrando oprograma. 
+
+Enquanto tal caso não ocorre os valores, a cada iteração, são escritos de forma invertida na memória. Assim como no exercício 5, é notório relembrar que esse programa está operando sobre um vetor e endereços internos.
 
 ---
 
@@ -102,7 +104,9 @@ print:
 
 Enunciado: Escreva um programa que escreve seu nome completo na saída do simulador. Se estiver trabalhando com uma dupla, escreva o nome de ambos os alunos. Exemplos de escrita na saída do simulador podem ser encontrados na pasta exemplo.
 
-Explicação:
+Explicação: A partir dos exemplos expostos e disponibilizados no github esse programa, escreve o nome dos quatro integrantes do grupo na saída do simulador. Para tal fato ocorrer, primeiro foi-se adicionado o texto desejado (os nomes) à v0. Após isso, o caracter presente em a0 é carregado para v0, esse ato, quando acabarem os caracteres fará com que a0 seja "igual" a zr. Logo, v0 nesse caso também será, o que levará à parte entitulada como "end". 
+
+Caso ainda haja caracteres a serem carregados, o a0 irá primeiro escrever o caracter e depois partir para o próximo presente no text. Quando o programa é direcionado para o "end" primeiro ele gera um "espaçamento" para a visualização ocorrer de forma mais clara, por fim, coloca essa mudança no terminal, após isso o programa é encerrado.
 
 ---
 
